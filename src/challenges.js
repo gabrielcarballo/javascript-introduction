@@ -48,12 +48,12 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 + 1 == cat2 - 1 || cat1 - 1 == cat2 + 1) {
-    return "os gatos trombam e o rato foge";
+  if (cat1 + 1 === cat2 - 1 || cat1 - 1 === cat2 + 1) {
+    return 'os gatos trombam e o rato foge';
   } else if (cat1 - mouse < cat2 - mouse) {
-    return "cat1"
+    return 'cat1'
   } else if (cat2 - mouse < cat1 - mouse) {
-    return "cat2"
+    return 'cat2'
   }
 }
 
@@ -125,8 +125,16 @@ function decode(stringA) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  let answer = [];
+  array.sort();
+  for (let index of array){
+    answer.push({tech: index, name: string});
+  }
+  if (array.length === 0){
+    return 'Vazio!'
+  }
+  return answer
 }
 
 module.exports = {
