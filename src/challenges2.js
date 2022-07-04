@@ -16,15 +16,19 @@ function generatePhoneNumber(phoneNumb) {
     return 'não é possível gerar um número de telefone com esses valores'
   } else {
     return `(${phoneNumb[0]}${phoneNumb[1]}) ${phoneNumb[2]}${phoneNumb[3]}${phoneNumb[4]}${phoneNumb[5]}${phoneNumb[6]}-${phoneNumb[7]}${phoneNumb[8]}${phoneNumb[9]}${phoneNumb[10]}`
-    }
-    return phoneNumb
   }
-  
+  return phoneNumb
+}
+
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+    if ((lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA +  lineB)) && ((lineA > Math.abs(lineB-lineC)) && (lineB > Math.abs(lineA-lineC)) && (lineC > Math.abs(lineB-lineA)))){
+      return true;
+    } else{
+      return false;
+    }
 }
 
 // Desafio 13
