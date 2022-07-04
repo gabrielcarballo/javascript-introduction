@@ -60,14 +60,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayAnswer) {
   let resposta = [];
-  for (let i = 0; i < arrayAnswer.length; i++){
-    if (arrayAnswer[i] % 3 === 0 && arrayAnswer[i] % 5 !== 0){
+  for (let i = 0; i < arrayAnswer.length; i++) {
+    if (arrayAnswer[i] % 3 === 0 && arrayAnswer[i] % 5 !== 0) {
       resposta.push('fizz');
-    }else if (arrayAnswer[i] % 3 !== 0 && arrayAnswer[i] % 5 === 0){
+    } else if (arrayAnswer[i] % 3 !== 0 && arrayAnswer[i] % 5 === 0) {
       resposta.push('buzz');
-    }else if (arrayAnswer[i] % 3 === 0 && arrayAnswer[i] % 5 === 0){
+    } else if (arrayAnswer[i] % 3 === 0 && arrayAnswer[i] % 5 === 0) {
       resposta.push('fizzBuzz');
-    }else if (arrayAnswer[i] % 3 !== 0 && arrayAnswer[i] % 5 !== 0){
+    } else if (arrayAnswer[i] % 3 !== 0 && arrayAnswer[i] % 5 !== 0) {
       resposta.push('bug!');
     }
   }
@@ -77,61 +77,61 @@ function fizzBuzz(arrayAnswer) {
 // Desafio 9
 function encode(stringA) {
   let answer = ""
-  for (let i = 0; i < stringA.length; i++){
-    if (stringA[i] === 'a'){
+  for (let i = 0; i < stringA.length; i++) {
+    if (stringA[i] === 'a') {
       answer += '1'
     }
-     else if (stringA[i] === 'e'){
+    else if (stringA[i] === 'e') {
       answer += '2'
     }
-    else if (stringA[i] === 'i'){
+    else if (stringA[i] === 'i') {
       answer += '3'
     }
-    else if (stringA[i] === 'o'){
+    else if (stringA[i] === 'o') {
       answer += '4'
     }
-    else if (stringA[i] === 'u'){
+    else if (stringA[i] === 'u') {
       answer += '5'
     }
-    else{
+    else {
       answer += stringA[i]
     }
   }
- return answer
-}  
+  return answer
+}
 function decode(stringA) {
   let answer = ""
-  for (let i = 0; i < stringA.length; i++){
-    if (stringA[i] === '1'){
+  for (let i = 0; i < stringA.length; i++) {
+    if (stringA[i] === '1') {
       answer += 'a'
     }
-     else if (stringA[i] === '2'){
+    else if (stringA[i] === '2') {
       answer += 'e'
     }
-    else if (stringA[i] === '3'){
+    else if (stringA[i] === '3') {
       answer += 'i'
     }
-    else if (stringA[i] === '4'){
+    else if (stringA[i] === '4') {
       answer += 'o'
     }
-    else if (stringA[i] === '5'){
+    else if (stringA[i] === '5') {
       answer += 'u'
     }
-    else{
+    else {
       answer += stringA[i]
     }
   }
- return answer
+  return answer
 }
 
 // Desafio 10
 function techList(array, string) {
   let answer = [];
   array.sort();
-  for (let index of array){
-    answer.push({tech: index, name: string});
+  for (let index of array) {
+    answer.push({ tech: index, name: string });
   }
-  if (array.length === 0){
+  if (array.length === 0) {
     return 'Vazio!'
   }
   return answer
