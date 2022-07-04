@@ -32,10 +32,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let waterCounter = 0
+  let regExp = /\d+/g;
+  let answer = string.match(regExp);
+  let str = ''
+  for (let i = 0; i < answer.length; i += 1){
+    waterCounter += Number(answer[i]);
 }
-
+  if (waterCounter === 1){
+    str =  waterCounter + ' copo de água'
+  } else if (waterCounter > 1){
+  str = waterCounter + ' copos de água'
+}
+return str
+}
 module.exports = {
   generatePhoneNumber,
   hydrate,
